@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>InteliTasks</title>
+</head>
+<body>
+    <header>
+        <h1>InteliTask</h1>
+        <button id="abrirFormulario">+ Criar Tarefa</button>
+    </header>
+    
+    <main id="containerTarefas">
+        
+    </main>
+    
+    <div id="formulario" class="formulario oculto">
+        <div class="conteudoFormulario">
+            <h2>Nova Tarefa</h2>
+    
+            <input type="text" id="tituloTarefa" placeholder="Titulo Da Tarefa">
+            <input type="date" id="prazoTarefa">
+            <textarea id="descricaoTarefa" placeholder="Descrição"></textarea>
+    
+            <button id="salvarTarefa">Salvar</button>
+            <button id="fecharFormulario">Cancelar</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
