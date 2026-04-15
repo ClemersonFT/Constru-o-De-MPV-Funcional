@@ -1,5 +1,4 @@
 
-
 INTRODUÇÃO
 
 
@@ -7,14 +6,19 @@ A falta de organização de tarefas é um problema comum tanto para pessoas quan
 Diante disso, este trabalho propõe o desenvolvimento de um sistema simples com foco na organização de tarefas, seguindo os princípios de construção de um MVP (Produto Mínimo Viável), priorizando simplicidade e funcionalidade.
 
 
+
 NOME DO SISTEMA
 
 Nome do sistema: InteliTasks
+
+
 
 PROBLEMA
 
 Muitas pessoas enfrentam dificuldades para organizar suas tarefas diárias, acompanhar prazos e visualizar o que já foi concluído.
 A falta de um sistema centralizado faz com que as atividades fiquem espalhadas em diferentes meios, causando desorganização e dificultando o controle das responsabilidades.
+
+
 
 
 PÚBLICO-ALVO
@@ -25,105 +29,108 @@ Profissionais
 Pessoas com rotina intensa
 
 
-
-
- OBJETIVO DO SISTEMA
+OBJETIVO DO SISTEMA
 
 O objetivo do sistema é permitir que o usuário registre, visualize e conclua tarefas de forma simples e organizada.
 A proposta é oferecer uma solução prática que ajude no controle das atividades, facilitando a organização pessoal.
 
 
+
+
+
+
+
+
+
+
+
+
+
 ESCOPO DO SISTEMA
 
+Escope IN (o que o sistema faz)
 
- Escopo IN (o que o sistema faz)
+CRUD de tarefas incluindo:
+Criar tarefas com Título, Objetivo, Prazo e Descrição;
+Listar tarefas por prazo;
+Editar tarefas;
+Excluir tarefas;
 
-Criar tarefas
- Permite ao usuário adicionar novas tarefas no sistema, informando o que precisa ser feito.
-Listar tarefas
- Exibe todas as tarefas cadastradas, permitindo que o usuário visualize suas atividades.
-Marcar tarefas como concluídas
- Dá ao usuário a opção de indicar que uma tarefa já foi finalizada, ajudando no controle do progresso.
-Interface simples com campo de entrada, botão e lista
- O sistema possui uma interface básica, com um campo para digitar tarefas, um botão para adicioná-las e uma lista para visualização.
+Prioridade de tarefas
+As tarefas serão listadas por ordem de prazo, mudando a cor do bloco da tarefa dinamicamente de tons de verde para tons de vermelho para indicar quando um prazo está se esgotando.
 
-Escopo OUT	
+Interface simples
+O sistema possui uma interface básica, com o nome da pagina, botão para criar tarefa, e interações simples com a tarefa por meio de um botão de excluir, editar e marcar como finalizado
+
+Escope OUT
 
 Notificações automáticas
- O sistema não envia alertas ou lembretes sobre tarefas ou prazos.
+O sistema não envia alertas e lembretes sobre tarefas ou prazos.
+
 Integração com outros aplicativos
- Não há conexão com outros sistemas como Google Calendar ou WhatsApp.
+Não há conexão com outros sistemas como Google Calendar ou WhatsApp.
+
 Agendamento com calendário
- O sistema não permite marcar tarefas em datas específicas dentro de um calendário.
-Controle financeiro
- Não há funcionalidades relacionadas a dinheiro, como pagamentos ou controle de gastos.](https://github.com/ClemersonFT/Constru-o-De-MPV-Funcional)
+O sistema não permite marcar tarefas em datas específicas dentro de um calendário.
 
 
-
-
-
-
-
-
-
-
-
-
-Escopo Creep
-
-Filtro de tarefas (pendente/concluída)
- Permitiria separar tarefas concluídas das pendentes, facilitando a organização.
-Exclusão de tarefas
- Daria ao usuário a opção de remover tarefas que não são mais necessárias.
-Armazenamento no navegador (localStorage)
- Permite salvar as tarefas no navegador, evitando que sejam perdidas ao atualizar a página.
 
 
 
 
 FUNCIONALIDADES
 
-As principais funcionalidades do sistema são:
-Cadastro de tarefas
- Permite ao usuário inserir novas tarefas no sistema, registrando o que precisa ser feito.
-Visualização da lista de tarefas
- Mostra todas as tarefas cadastradas em uma lista, facilitando a organização e o acompanhamento.
-Marcação de tarefas como concluídas
- Permite ao usuário indicar que uma tarefa foi finalizada, ajudando a acompanhar o progresso das atividades.
 
-8 TECNOLOGIA / STACK
+Requisitos Funcionais(RF):
 
+RF01: O sistema deve permitir criar tarefas por Titulo, Objetivo, Prazo e Descrição;
+RF02: O sistema deve listar todas as tarefas;
+RF03: O sistema deve permitir editar tarefas;
+RF04: O sistema deve permitir excluir tarefas;
+RF05: O sistema deve permitir marcar tarefas como concluídas.
 
-O sistema pode ser desenvolvido utilizando:
-HTML
-CSS
-JAVA
-SPRING BOOT
+Regras de Negocio(RN):
 
+RN01: Tarefas não podem ser criadas sem título, objetivo ou descrição;
+RN02: As tarefas devem ser ordenadas por prazo;
+RN03: Tarefas devem mudar de cor conforme proximidade do prazo;
+RN04: Tarefas concluídas devem ser visualmente diferenciadas. 
 
-9 DESENVOLVIMENTO
+Requisitos Não Funcionais(RNF):
 
-
-O sistema foi construído com uma interface simples e direta, composta por um campo de entrada para digitação da tarefa, um botão para adicioná-la e uma lista para exibir todas as tarefas cadastradas.
-A lógica do sistema permite adicionar novas tarefas, exibi-las na tela e marcá-las como concluídas. Durante o desenvolvimento, a principal decisão foi manter o sistema o mais simples possível, focando apenas nas funcionalidades essenciais do MVP.
-
+RNF01: O sistema deve ter interface simples e intuitiva.
+RNF02: O sistema deve ser desenvolvido para o ambiente web
+RNF03: O sistema precisa funcionar sem lentidão em nenhuma de suas interações
+RNF04: O layout deve ser organizado em formato de grade (grid).
 
 
-10 CONCLUSÃO
+TECNOLOGIA / STACK
 
-
-
-O sistema desenvolvido atingiu o objetivo proposto, oferecendo uma solução simples para organização de tarefas.
-Entre os principais aprendizados, destaca-se a importância de definir bem o escopo antes de iniciar o desenvolvimento. A maior dificuldade encontrada foi evitar adicionar funcionalidades extras que não faziam parte do objetivo principal.
-
-
-11 REFLEXÃO FINAL
+	A interface do sistema será desenvolvida em HTML, CSS e JAVASCRIPT. 
 
 
 
-Foi mais difícil decidir o escopo do que programar, pois foi necessário evitar adicionar funcionalidades desnecessárias.
-O escopo foi seguido corretamente, mantendo apenas o essencial.
-A solução resolve o problema proposto, permitindo organizar tarefas de forma simples.
+DESENVOLVIMENTO
+
+O desenvolvimento do sistema teve início na data de 15/04/2026.
+Atualmente, já foram implementados os seguintes requisitos funcionais: 
+RF01: criação de tarefas;
+RF02: listagem de tarefas em tela.
+A estrutura do projeto foi organizada de forma básica, contendo somente os arquivos index.html, index.css e index.js.
+Como próximo passo do desenvolvimento, estão previstas as seguintes implementações
+As tarefas precisam ser persistidas localmente para não haver perda ao recarregar a página.
+Será implementada a organização em GRID para a área de tarefa.
+Será aplicado a listagem ordenada por prazos que mudam de cor dinamicamente. 
+Também será adicionado os botões de exclusão e edição para cada tarefa criada respectivamente.
+
+CONCLUSÃO
+
+	O projeto já está em fase de desenvolvimento, apresentando funcionalidades básicas de cadastro e visualização de tarefas. Já foi possível validar a identidade visual do projeto que está totalmente alinhada com o que foi proposto. As próximas etapas envolvem a implementação das funcionalidades restantes.
+
+
+
+
+
 
 
 
